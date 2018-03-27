@@ -7,12 +7,9 @@ public class AccountRunner {
 		Service accountService = new Service();
 		Account account1 = new Account("Jordan", "McRobert", 206459);
 		accountService.addAccount(account1);
-		Account account2 = accountService.retrieveAccount(account1.getAccountNumber());
-		if(account1.equals(account2)) {
-			System.out.println("Account Service works");
-		} else {
-			System.out.println("Account Service does not work");
-		}
+		Account account2 = new Account("Jane", "Smith", 240567);
+		accountService.addAccount(account2);
+		System.out.println(accountService.accountsAsJsonString());
 		
 	}
 
