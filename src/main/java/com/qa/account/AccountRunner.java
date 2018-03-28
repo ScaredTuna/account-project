@@ -13,7 +13,7 @@ public class AccountRunner {
 		Account account2 = new Account("Jane", "Smith", 240567);
 		accountService.addAccount(account2);
 		System.out.println(accountService.accountsAsJsonString());
-		int numberAccountsJane = counter.countNumberAccountsWithName("Jane", accountService.getAccountList());
+		long numberAccountsJane = counter.countNumberAccountsWithName("Jane", accountService.getAccountList());
 		System.out.println("Number of accounts with first name Jane: " + numberAccountsJane);
 	}
 
