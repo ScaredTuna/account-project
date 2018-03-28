@@ -18,7 +18,7 @@ public class AccountNameCounterTest {
 	public void test() {
 		service = new Service();
 		counter = new AccountNameCounter();
-		int accountsSameName = counter.countNumberAccountsWithName("Joe", service.getAccountList());
+		long accountsSameName = counter.countNumberAccountsWithName("Joe", service.getAccountList());
 		assertEquals(0, accountsSameName);
 		Account account1 = new Account("Joe", "Bloggs", 123);
 		service.addAccount(account1);
