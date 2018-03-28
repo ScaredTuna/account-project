@@ -10,8 +10,8 @@ public class AccountNameCounter {
 
 	public int countNumberAccountsWithName(String name, Map<Integer, Account> accountMap) {
 		numberAccountsWithName = 0;
-		for(int accountNumber:accountMap.keySet()) {
-			if(accountMap.get(accountNumber).getFirstName().equals(name)) {
+		for(Map.Entry<Integer, Account> entry:accountMap.entrySet()) {
+			if(entry.getValue().getFirstName().equals(name)) {
 				numberAccountsWithName++;
 			}
 		}
